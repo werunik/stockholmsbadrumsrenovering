@@ -1,0 +1,34 @@
+<h2 itemprop="name">Bloggen</h2>
+<div class="blog flex one two-500 two-800" itemscope="" itemtype="http://schema.org/Blog">
+  {% assign posts = (site.posts | sort: 'date') | reverse %}
+  {% for post in posts limit:4 %}
+    {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+    {% if thecycle == 'odd' %}
+    <article class="post one odd" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <h2>
+        <a href="{{ post.url }}" itemprop="url">
+          <span itemprop="name">{{ post.title }}</span>
+        </a>
+      </h2>
+      <div class="entry" itemprop="description">
+        {{ post.content | strip_html | truncatewords: 40 }}
+      </div>
+      <a href="{{ post.url }}" itemprop="url" class="read-more">Läs mer</a>
+      <meta itemprop="keywords" content="{{ post.categories | join: ',' }}" />
+    </article>
+    {% else %}
+    <article class="post one even" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <h2>
+        <a href="{{ post.url }}" itemprop="url">
+          <span itemprop="name">{{ post.title }}</span>
+        </a>
+      </h2>
+      <div class="entry" itemprop="description">
+        {{ post.content | strip_html | truncatewords: 40 }}
+      </div>
+      <a href="{{ post.url }}" itemprop="url" class="read-more">Läs mer</a>
+      <meta itemprop="keywords" content="{{ post.categories | join: ',' }}" />
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>

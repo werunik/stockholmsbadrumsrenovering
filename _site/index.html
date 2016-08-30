@@ -58,6 +58,19 @@
   a[href^=mailto], a[href^=tel] {
     white-space: nowrap;
   }
+  a.link-more:after {
+    content: ' →';
+  }
+  a.read-more {
+    color: #000;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+  a.read-more:after {
+    content: " »";
+  }
   hr {
     border: 0;
     background-color: #ddd;
@@ -80,6 +93,9 @@
   }
   .subtitle {
     font-size: 1.1em;
+  }
+  .inline {
+    display: inline-block;
   }
   blockquote {
     box-shadow: none;
@@ -110,6 +126,38 @@
   .section-padding {
     padding: 1.4em;
   }
+  .white-bg {
+    background: #fff;
+  }
+  /* Forms */
+  .required:after {
+    color: red;
+    content: ' *';
+    font-size: 1.2em;
+  }
+  input:not([type=radio]):not([type=checkbox]),
+  textarea {
+    margin-bottom: .4em;
+    -webkit-transition: border .15s;
+    -moz-transition: border .15s;
+    -o-transition: border .15s;
+    transition: border .15s;
+  }
+  input,
+  textarea {
+    border: 2px solid #ddd;
+  }
+  input:hover,
+  textarea:hover {
+    border-color: #2ab7ca;
+  }
+  .form-button {
+    background-color: #EA5940;
+    color: #fff;
+    font-size: 1.2em;
+  }
+  /* Sections */
+
   /* Hero */
   .hero {
     background: #000;
@@ -148,11 +196,18 @@
   .hero-content h1 {
     color: #fff;
   }
-/* CTA */
+  /* CTA */
   .cta .button {
     color: #fff;
     background-color: #EA5940;
     font-size: 1.6em;
+  }
+  .cta-form {
+    background: #fff;
+    border-radius: 3px;
+    border: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    padding: 2rem;
   }
   /* Blocks */
   .block {
@@ -175,6 +230,8 @@
     font-weight: 500;
     text-transform: uppercase;
   }
+  /* Blog */
+
   @media screen and (max-width: 767px) {
     html {
       font-size: 120%;
@@ -196,6 +253,14 @@
     .hero-content p {
       margin: 0 auto;
       max-width: 40em;
+    }
+    article.post {
+      padding-right: 2em;
+    }
+    .cta-picture img {
+      float: right;
+      height: 250px;
+      width: auto;
     }
   }
   @media screen and (max-width: 400px) {
@@ -504,7 +569,7 @@
     </div>
   </div>
 </section>
-<section class="main flex one two-500 two-800 section-padding">
+<section class="main flex one two-500 two-800 section-padding white-bg">
   <div class="one">
     <h2>Välkommen till Stockholms Badrums Renovering</h2>
     <div id="primary-text">
@@ -571,9 +636,94 @@
       <div class="testimonial-client">— Johan med Familj</div>
     </div>
   
-  <a href="/rekommendationer" alt="Fler Rekommendationer för Stockholms Badrums Renovering">Fler Rekommendationer</a>
+  <a href="/rekommendationer" alt="Fler Rekommendationer för Stockholms Badrums Renovering" class="link-more">Fler Rekommendationer</a>
 </div>
   </div>
+</section>
+<section class="cta section-padding">
+  <h2 class="text-center m-b-2em">Vill du få en gratis offert eller ett kostnadsfritt besök?</h2>
+<div class="flex one two-500 two-800">
+  <div class="cta-form one">
+    <form action="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post">
+      <fieldset class="flex one two-500 two-800">
+        <h3 class="box-title">Intresseanmälan</h3>
+        <input type='hidden' name='redirect_to' value='http://0.0.0.0:4000/offert/tack' />
+        <label class="required" for="name">Namn</label>
+        <input name="name" type="text" required>
+        <label class="required" for="email">E-post</label>
+        <input name="email" type="email" required>
+        <label for="email">Telefonnummer</label>
+        <input name="phone" type="tel">
+        <input type="hidden" name='content'>
+      </fieldset>
+      <fieldset class="flex one">
+        <label for="message">Meddelande</label>
+        <textarea name='message' rows="8" placeholder="Textarea"></textarea>
+      </fieldset>
+      <fieldset class="flex">
+        <input class='form-button' type='submit' value='Kontakta Mig'>
+      </fieldset>
+    </form>
+  </div>
+  <div class="cta-picture one one-500 one-800">
+    <img src="https://dl.dropboxusercontent.com/u/92032752/stockholmsbadrumsrenovering/assets/images/badrumsrenovering-cta.jpg" alt="Badrumsrenovering"></img>
+  </div>
+</div>
+</section>
+<section class="blog section-padding white-bg">
+  <h2 itemprop="name">Bloggen</h2>
+<div class="blog flex one two-500 two-800" itemscope="" itemtype="http://schema.org/Blog">
+  
+  
+    
+    
+    <article class="post one odd" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <h2>
+        <a href="/inspiration/badrumsrenovering/2016/08/30/second-post.html" itemprop="url">
+          <span itemprop="name">Second post</span>
+        </a>
+      </h2>
+      <div class="entry" itemprop="description">
+        You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve,...
+      </div>
+      <a href="/inspiration/badrumsrenovering/2016/08/30/second-post.html" itemprop="url" class="read-more">Läs mer</a>
+      <meta itemprop="keywords" content="inspiration,badrumsrenovering" />
+    </article>
+    
+  
+    
+    
+    <article class="post one even" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <h2>
+        <a href="/inspiration/badrumsrenovering/2016/08/30/third-post.html" itemprop="url">
+          <span itemprop="name">Inspiration från BadrumsExpo 2016</span>
+        </a>
+      </h2>
+      <div class="entry" itemprop="description">
+        You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve,...
+      </div>
+      <a href="/inspiration/badrumsrenovering/2016/08/30/third-post.html" itemprop="url" class="read-more">Läs mer</a>
+      <meta itemprop="keywords" content="inspiration,badrumsrenovering" />
+    </article>
+    
+  
+    
+    
+    <article class="post one odd" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+      <h2>
+        <a href="/jekyll/update/2016/08/29/welcome-to-jekyll.html" itemprop="url">
+          <span itemprop="name">Welcome to Jekyll!</span>
+        </a>
+      </h2>
+      <div class="entry" itemprop="description">
+        You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve,...
+      </div>
+      <a href="/jekyll/update/2016/08/29/welcome-to-jekyll.html" itemprop="url" class="read-more">Läs mer</a>
+      <meta itemprop="keywords" content="jekyll,update" />
+    </article>
+    
+  
+</div>
 </section>
 </main>
 
