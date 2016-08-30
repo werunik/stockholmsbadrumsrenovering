@@ -9,7 +9,7 @@ permalink: /rekommendationer/
 ---
 <h1>Badrumsrenovering Stockholm Rekommendation</h1>
 <div class="latest-testimonials">
-  <h2>Nyligen nöjda kunder</h2>
+  <h2>Nöjda kunder</h2>
   {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
   {% for rekommendation in rekommendationer %}
     <div class="testimonial">
