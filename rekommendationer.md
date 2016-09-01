@@ -3,8 +3,8 @@ layout: testimonial
 title: Nöjda kunder
 date: 2016-08-29 15:54:10 +0200
 class: testimonial-page
-headline: HEADLINE goes here
-description: DESCRIPTION goes here
+headline: Många som anlitar oss har blivit rekommenderade av våra kunder. De visar att de uppskattar vårt arbete och det kommer du garanterat också att göra.
+description: Många som anlitar oss har blivit rekommenderade av våra kunder. De visar att de uppskattar vårt arbete och det kommer du garanterat också att göra.
 permalink: /rekommendationer/
 ---
 <div class="flex one two-800">

@@ -3,8 +3,8 @@ layout: page
 title: Stockholms Badrumsrenovering Bloggen
 date: 2016-08-29 15:54:10 +0200
 class: blog
-headline: HEADLINE goes here
-description: DESCRIPTION goes here
+headline: Besök vår blogg för att få inspiration på badrumsrenovering
+description: Besök vår blogg för att få inspiration på badrumsrenovering
 permalink: /bloggen/
 ---
 <section class="blog section-padding white-bg">

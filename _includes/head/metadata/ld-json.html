@@ -2,8 +2,8 @@
   {
     "@context": "http://schema.org",
     "@type": "NewsArticle",
-    "mainEntityOfPage": "http://cdn.ampproject.org/article-metadata.html",
-    "headline": "{{ page.headline }}",
+    "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+    "headline": "{{ page.title }}",
     "datePublished": "{{ page.date }}",
     "dateModified": "{{ page.date }}",
     "description": "{{ page.description | flatify }}",

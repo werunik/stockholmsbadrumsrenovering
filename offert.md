@@ -3,8 +3,7 @@ layout: offert
 title: Vill du få en gratis offert eller ett kostnadsfritt besök?
 date: 2016-08-29 15:54:10 +0200
 class: offert
-headline: HEADLINE goes here
-description: DESCRIPTION goes here
+description: Kontakta oss för boka en gratis offertbesök.
 permalink: /offert/
 ---
 <div class="cta-form one half-500 half-800">
