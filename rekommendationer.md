@@ -1,15 +1,13 @@
 ---
-layout: page
-title: Badrumsrenovering Stockholm Rekommendationer
+layout: testimonial
+title: Nöjda kunder
 date: 2016-08-29 15:54:10 +0200
 class: testimonial-page
 headline: HEADLINE goes here
 description: DESCRIPTION goes here
 permalink: /rekommendationer/
 ---
-<section class="testimonials section-padding white-bg">
-  <h1>Nöjda kunder</h1>
-  <div class="flex one two-800">
+<div class="flex one two-800">
     {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
     {% for rekommendation in rekommendationer %}
       <div class="block">
@@ -22,7 +20,3 @@ permalink: /rekommendationer/
       </div>
     {% endfor %}
   </div>
-</section>
-<section class="cta section-padding">
-  {% include partials/block_cta.html %}
-</section>

@@ -2,18 +2,11 @@
 layout: default
 ---
 <main class="flex">
-  <section class="testimonials testimonials-detail section-padding white-bg">
+  <section class="page page-detail section-padding white-bg">
     <h1 class="text-center">{{ page.title }}</h1>
-    <div class="testimonial block one half-800">
+    <div class="one">
       {{ content }}
     </div>
-    <article class="gallery">
-      {% for image in page.image %}
-        <figure>
-          <img src="{{ page.image[forloop.index0] }}" alt="{{ page.image-alt[forloop.index0] }}" class="img-responsive">
-        </figure>
-      {% endfor %}
-    </article>
   </section>
   <section class="cta section-padding">
     {% include partials/block_cta.html %}
