@@ -9,7 +9,7 @@ permalink: /rekommendationer/
 ---
 <section class="testimonials section-padding white-bg">
   <h1>Nöjda kunder</h1>
-  <div class="flex two">
+  <div class="flex one two-800">
     {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
     {% for rekommendation in rekommendationer %}
       <div class="block">
