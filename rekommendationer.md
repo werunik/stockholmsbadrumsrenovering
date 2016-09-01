@@ -2,7 +2,7 @@
 layout: page
 title: Badrumsrenovering Stockholm Rekommendationer
 date: 2016-08-29 15:54:10 +0200
-class: rekommendation
+class: testimonial-page
 headline: HEADLINE goes here
 description: DESCRIPTION goes here
 permalink: /rekommendationer/

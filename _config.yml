@@ -15,8 +15,8 @@ github_username:  kmliving
 organization_name: Stockholms Badrums Renovering
 
 collections:
-  blog:
-    permalink: /blog/:year/:title
+  posts:
+    permalink: /bloggen/:year/:title
   kunder:
     output: true
     permalink: /kunder/:path/
