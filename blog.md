@@ -13,6 +13,8 @@ permalink: /bloggen/
     {% assign posts = (site.posts | sort: 'date') | reverse %}
     {% for post in posts %}
       <article class="post one" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <meta itemprop="description" content="{{ page.description | strip_html | truncatewords: 40 }}">
+        <meta itemprop="keywords" content="{{ post.categories | join: ',' }}" />
         <h2>
           <a href="{{ post.url }}" itemprop="url">
             <span itemprop="name">{{ post.title }}</span>
@@ -22,7 +24,6 @@ permalink: /bloggen/
           {{ post.content | strip_html | truncatewords: 40 }}
         </div>
         <a href="{{ post.url }}" itemprop="url" class="read-more">Läs mer</a>
-        <meta itemprop="keywords" content="{{ post.categories | join: ',' }}" />
       </article>
     {% endfor %}
   </div>
