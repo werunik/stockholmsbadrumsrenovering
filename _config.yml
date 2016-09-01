@@ -15,11 +15,17 @@ github_username:  kmliving
 organization_name: Stockholms Badrums Renovering
 
 collections:
+  blog:
+    permalink: /blog/:year/:title
   kunder:
     output: true
     permalink: /kunder/:path/
   rekommendationer:
     output: true
     permalink: /rekommendationer/:path/
+
 # Build settings
 markdown: kramdown
+
+gems:
+  - jekyll-sitemap
