@@ -9,8 +9,9 @@ description: Stort tack till alla som hjälpt oss att bygga denna webbplats
   <ul>
     <li>
       <h6>Icons</h6>
-      <p>https://thenounproject.com/search/?q=call&i=584740</p>
-      <p>https://thenounproject.com/search/?q=call&i=23108</p>
+      <a href="//thenounproject.com/search/?q=call&i=584740"></a>
+      <a href="//thenounproject.com/term/water/372939/">Logo</a>
+      <a href="//thenounproject.com/search/?q=menu&i=532819">Menu</a>
     </li>
   </ul>
 </section>
