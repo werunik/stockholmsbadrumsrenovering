@@ -3,8 +3,7 @@ layout: page
 title: Stockholms Badrumsrenovering Bloggen
 date: 2016-08-29 15:54:10 +0200
 class: blog
-headline: Besök vår blogg för att få inspiration på badrumsrenovering
-description: Besök vår blogg för att få inspiration på badrumsrenovering
+description: Bloggen för dig som älskar badrum! Följ oss här, på Instagram (@km.living) och Facebook (www.facebook.com/KMLivingConstructionAB)
 permalink: /bloggen/
 ---
 <div class="blog flex one two-500 two-800" itemscope="" itemtype="http://schema.org/Blog">
