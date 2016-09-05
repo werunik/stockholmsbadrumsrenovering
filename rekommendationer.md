@@ -13,7 +13,7 @@ permalink: /rekommendationer/
       <div class="block">
         <div class="flex one testimonial">
           <h4><a class="post-link" href="{{ rekommendation.url | prepend: site.baseurl }}">{{ rekommendation.title | escape }}</a></h4>
-          <blockquote>{{ rekommendation.excerpt markdownify | strip_html | truncatewords: 50 }}</blockquote>
+          <blockquote>{{ rekommendation.excerpt | strip_html | truncatewords: 50 }}</blockquote>
           <div class="testimonial-client">— {{ rekommendation.kund }}</div>
           <a class="post-link" href="{{ rekommendation.url | prepend: site.baseurl }}">Läs mer</a>
         </div>
