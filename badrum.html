@@ -81,7 +81,7 @@
 }
   body {
     background: #fff;
-    border: 10px solid #f19126;
+    border: 10px solid #6ecaeb;
     color: #1d1d1d;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
@@ -94,7 +94,7 @@
     text-rendering: optimizeLegibility;
   }
   body.campaign {
-    background: #d8dfe6;
+    background: #f7f8f9;
   }
   .clearfix:after {
     content: " ";
@@ -107,7 +107,7 @@
     text-decoration: none;
   }
   a:link, a:visited {
-    color: #f19126;
+    color: #6ecaeb;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.25s ease;
@@ -357,7 +357,7 @@
   }
   .campaign-trust,
   .campaign-testimonials {
-    border-top: 1px dashed #f2f2f2;
+    border-top: 1px dashed #ddd;
     margin-top: 40px;
     padding-top: 40px;
   }
@@ -367,7 +367,7 @@
     padding: 0 40px;
   }
   .campaign .customer-review {
-    border-bottom: 1px dashed #f1f1f1;
+    border-bottom: 1px dashed #ddd;
     padding: 20px 0;
   }
   .campaign .customer-reviews h3,
@@ -496,7 +496,7 @@
   }
   /* Footer */
   footer {
-    background: #f5f5f5;
+    background: #f2f2f2;
     padding: 60px 0;
   }
   footer ul {
@@ -553,8 +553,11 @@
       margin: 16px 0;
       width: 100px;
     }
-    .campaign .campaign-description {
+    .campaign-detail .campaign-description {
       padding: 0 20px;
+    }
+    .campaign-detail-google .campaign-description {
+      padding: 0;
     }
     .campaign .campaign-description-bg-arrow {
       background: none;
@@ -565,15 +568,46 @@
       line-height: 40px;
       margin: 20px 0;
     }
-    .campaign .campaign-description p {
+    .campaign-detail-google h1 {
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0 0 20px 0;
+    }
+    .campaign-detail .campaign-description p {
       font-size: 18px;
     }
-    .campaign .form-campaign {
+    .campaign-detail-google .campaign-description p {
+      font-size: 16px;
+    }
+    .campaign-detail .form-campaign {
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none;
       padding: 0;
       margin-left: 0;
     }
-    .campaign .form-campaign fieldset {
+    .campaign-detail-google .form-campaign {
       padding: 10px;
+      margin-left: 0;
+    }
+    .campaign-detail-google .form-campaign .form-title {
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .campaign-detail .form-campaign fieldset {
+      padding: 10px;
+    }
+    .campaign-detail-google .form-campaign fieldset {
+      padding: 0;
+    }
+    .campaign-detail-google .campaign-testimonials {
+      margin-top: 0;
+      padding-top: 10px;
+    }
+    .campaign-detail-google .campaign-testimonials .campaign-testimonials-title,
+    .campaign-detail-google .customer-reviews,
+    .campaign-detail-google .faq {
+      padding: 0;
     }
     footer {
       padding: 20px;
@@ -627,7 +661,7 @@
     </a>
 </header>
     <main itemid="https://www.stockholmsbadrumsrenovering.com/badrum" itemscope itemtype="http://schema.org/WebPage">
-  <section class="campaign-detail p-b-90px grid-container clearfix" itemscope itemtype="http://schema.org/CollectionPage">
+  <section class="campaign-detail campaign-detail-google p-b-90px grid-container clearfix" itemscope itemtype="http://schema.org/CollectionPage">
     <link itemprop="mainEntityOfPage" href="https://www.stockholmsbadrumsrenovering.com/badrum">
     <meta itemprop="datePublished" content="2016-11-08">
     <meta itemprop="dateModified" content="2016-11-08">
@@ -652,9 +686,7 @@
         <div class="col-3">
           <div class="campaign-description">
 
-            <h3>Är det dags att renovera ditt badrum?</h3>
-
-<p>KM Living Construction AB är en byggfirma med bred och mångårig erfarenhet inom byggbranschen.</p>
+            <p>KM Living Construction AB är en byggfirma med bred och mångårig erfarenhet inom byggbranschen.</p>
 
 <p>Sedan starten år 2008 har det viktigaste för oss varit att du som kund ska få dina önskemål uppfyllda. Det bidrar vi till genom att hålla en nära dialog med dig och utföra våra arbeten med hög kvalitet.</p>
 
@@ -668,7 +700,7 @@
         <div class="col-3">
           <div class="cta-form m-t-70px sm-m-t-20px">
   <form class="container form-campaign" action-xhr="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">
-    <h3 class="form-title">Få en gratis offert idag</h3>
+    <h3 class="form-title">Få en gratis offert idag!</h3>
     <fieldset>
       <div class="form-row">
         <input type='hidden' name='redirect_to' value='https://www.stockholmsbadrumsrenovering.com/tack/' />
@@ -702,7 +734,8 @@
     </div>
     <div class="grid-container campaign-testimonials">
       <div class="row">
-        <h3 class="campaign-testimonials-title">Nöjda kunder är det viktigaste vi har</h3>
+
+        <h3 class="campaign-testimonials-title">Att du blir nöjd är det viktigaste för oss</h3>
         
 
   <div class="col-2">
@@ -770,7 +803,7 @@
           <div class="customer-reviews">
             <h3>kundrecensioner</h3>
             <div class="customer-review">
-              <p>Professionellt och trevligt bemötande från början till slut, Kvaliteten i projektet har varit imponerande rakt igenom.<br>
+              <p>Professionellt och trevligt bemötande från början till slut. Kvaliteten i projektet har varit imponerande rakt igenom.<br>
               Kan absolut rekommendera.</p>
               <div class="photo inline">
                 <amp-img class="logo" placeholder
@@ -798,7 +831,7 @@
               </div>
             </div>
             <div class="customer-review">
-              <p>Vi fick vår badrum renoverad i April 2016. Jobbet har gjorts riktigt grundligt och det finns inte det minsta fel.
+              <p>Vi fick vår badrum renoverad i april 2016. Jobbet har gjorts riktigt grundligt och det finns inte det minsta fel.
               <br>
               Vi är mycket nöjda, rekommenderas varmt!</p>
               <div class="photo inline">
@@ -817,7 +850,7 @@
         <div class="col-3">
           <div class="faq certifications">
             <div class="faq-item">
-              <h4>I samarbete med</h4>
+              <h4>Garantier och certifieringar</h4>
               <ul>
                 <li>Vi är medlemmar i byggkeramikrådet, ElsäkerhetsverketSÄK och PER.</li>
                 <li>Vi är behöriga i våtrum, el och tätskiktssystem, vi samarbetar endast med behöriga underentreprenörer.</li>
